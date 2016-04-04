@@ -10,6 +10,7 @@
 
 fresh freshshell/fresh bin/fresh --bin
 # Shell
+fresh 'shell/*'
 fresh 'shell/aliases/*'
 
 # Vim
