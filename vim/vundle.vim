@@ -7,6 +7,7 @@ Bundle 'rking/ag.vim'
 Bundle 'tpope/vim-endwise.git'
 Bundle 'tpope/vim-fugitive.git'
 Bundle 'godlygeek/tabular'
+Bundle 'scrooloose/nerdtree'
 
 " Colors
 Bundle 'altercation/vim-colors-solarized'
@@ -21,7 +22,7 @@ Bundle 'airblade/vim-gitgutter.git'
 " Language
 Bundle 'plasticboy/vim-markdown'
 let g:vim_markdown_initial_foldlevel=99
-Bundle 'tpope/vim-rails.git'
+Bundle 'tpope/vim-rails'
 Bundle 'vim-ruby/vim-ruby'
 Bundle 'thoughtbot/vim-rspec.git'
 Bundle 'elixir-lang/vim-elixir'

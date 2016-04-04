@@ -1,0 +1,37 @@
+# freshshell.com
+#
+# Examples:
+#
+#   fresh twe4ked/dotfiles shell/functions/\*
+#   fresh jasoncodes/dotfiles shell/aliases/rails.sh
+#   fresh jasoncodes/dotfiles config/tmux.conf --file
+#
+# See http://freshshell.com/readme for documentation.
+
+fresh freshshell/fresh bin/fresh --bin
+# Shell
+fresh 'shell/aliases/*'
+
+# Vim
+fresh-options --file=$HOME/.vimrc
+  fresh vim/leader.vim
+  fresh twe4ked/dotfiles vim/vundle_before.vim
+  fresh vim/vundle.vim
+  fresh twe4ked/dotfiles vim/vundle_after.vim
+  fresh vim/global.vim
+  fresh 'vim/plugins/*.vim'
+fresh-options
+
+# Fonts
+fresh Lokaltog/powerline font/PowerlineSymbols.otf --file=~/.fonts/PowerlineSymbols.otf
+fresh Lokaltog/powerline font/10-powerline-symbols.conf --file=~/.config/fontconfig/conf.d/10-powerline-symbols.conf
+
+if [ ! -e ~/.gitconfig.local ]; then
+    echo "Configuring local Git settings:"
+    read -p "    Enter Git Name: " username
+    git config -f ~/.gitconfig.local user.name "$username"
+    read -p "    Enter Git Email: " email
+    git config -f ~/.gitconfig.local user.email $email
+    echo "Configured git settings in ~/.gitconfig.local. Not stored in local .dotfiles repo."
+fi
+
