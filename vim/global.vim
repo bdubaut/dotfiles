@@ -6,6 +6,7 @@ set laststatus=2                " Always show status line
 set autoread                    " Sensibly read changed files
 set showcmd                     " Display incomplete commands
 set cursorline                  " Where am I?
+set noswapfile                  " No swap files
 autocmd InsertEnter,InsertLeave * set cul! " Toggle cursorline in insert mode.
 
 " Indentation
