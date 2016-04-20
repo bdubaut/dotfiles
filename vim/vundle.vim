@@ -1,17 +1,22 @@
 " Misc
-Bundle 'ntpeters/vim-better-whitespace'
-Bundle 'ConradIrwin/vim-bracketed-paste'
 Bundle 'AndrewRadev/linediff.vim'
+Bundle 'ConradIrwin/vim-bracketed-paste'
+Bundle 'Raimondi/delimitMate'
+Bundle 'ervandew/supertab'
+Bundle 'godlygeek/tabular'
 Bundle 'kien/ctrlp.vim'
+Bundle 'ntpeters/vim-better-whitespace'
+Bundle 'pbrisbin/vim-mkdir'
 Bundle 'rking/ag.vim'
+Bundle 'scrooloose/nerdtree'
+Bundle 'shime/vim-livedown'
 Bundle 'tpope/vim-endwise.git'
 Bundle 'tpope/vim-fugitive.git'
-Bundle 'godlygeek/tabular'
-Bundle 'scrooloose/nerdtree'
+Bundle 'tpope/vim-surround'
+Bundle 'tpope/vim-unimpaired'
 
 " Colors
 Bundle 'altercation/vim-colors-solarized'
-Bundle 'chriskempson/base16-vim'
 
 " Visual
 let g:airline_powerline_fonts = 1
@@ -20,13 +25,17 @@ Bundle 'vim-airline/vim-airline-themes'
 Bundle 'airblade/vim-gitgutter.git'
 
 " Language
-Bundle 'plasticboy/vim-markdown'
-let g:vim_markdown_initial_foldlevel=99
-Bundle 'tpope/vim-rails'
-Bundle 'vim-ruby/vim-ruby'
-Bundle 'thoughtbot/vim-rspec.git'
 Bundle 'elixir-lang/vim-elixir'
 Bundle 'elzr/vim-json'
+Bundle 'kchmck/vim-coffee-script'
+Bundle 'othree/html5.vim'
+Bundle 'pangloss/vim-javascript'
+Bundle 'plasticboy/vim-markdown'
+Bundle 'thoughtbot/vim-rspec.git'
+Bundle 'tpope/vim-rails'
+Bundle 'vim-ruby/vim-ruby'
+
+let g:vim_markdown_initial_foldlevel=99
 
 " Comments
 Bundle 'tomtom/tcomment_vim'

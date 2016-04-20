@@ -7,6 +7,7 @@ set autoread                    " Sensibly read changed files
 set showcmd                     " Display incomplete commands
 set cursorline                  " Where am I?
 set noswapfile                  " No swap files
+let &colorcolumn="80"         " Highlight column 80
 autocmd InsertEnter,InsertLeave * set cul! " Toggle cursorline in insert mode.
 
 " Indentation
