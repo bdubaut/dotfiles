@@ -31,13 +31,13 @@ set number
 set relativenumber
 
 " Colors
-set t_Co=256                  " I use 16-color solarized, but...
+" set t_Co=256                  " I use 16-color solarized, but...
 syntax enable
 set background=dark
 
-let g:solarized_hitrail=1     " highlight trailing whitespace
-call togglebg#map("<F5>")     " F5 toggles background dark/light
-colorscheme solarized
+" let g:solarized_hitrail=1     " highlight trailing whitespace
+" call togglebg#map("<F5>")     " F5 toggles background dark/light
+colorscheme Tomorrow-Night
 hi CursorLineNr ctermfg=7     " highlght current line number
 
 "colorscheme hybrid

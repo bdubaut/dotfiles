@@ -17,6 +17,7 @@ Bundle 'tpope/vim-unimpaired'
 
 " Colors
 Bundle 'altercation/vim-colors-solarized'
+Bundle 'flazz/vim-colorschemes'
 
 " Visual
 let g:airline_powerline_fonts = 1
