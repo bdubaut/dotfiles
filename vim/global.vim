@@ -19,6 +19,7 @@ set autoindent
 filetype indent on
 set foldmethod=indent                      " Fold based on source indentation
 set foldlevelstart=99                      " Expand all folds by default
+autocmd BufWritePre * StripWhitespace
 
 " Searching
 set incsearch
@@ -31,14 +32,12 @@ set number
 set relativenumber
 
 " Colors
-" set t_Co=256                  " I use 16-color solarized, but...
+set t_Co=256                  " I use 16-color solarized, but...
 syntax enable
-set background=dark
+set background=light
 
 " let g:solarized_hitrail=1     " highlight trailing whitespace
 " call togglebg#map("<F5>")     " F5 toggles background dark/light
-colorscheme Tomorrow-Night
+" colorscheme Tomorrow-Night
+colorscheme solarized
 hi CursorLineNr ctermfg=7     " highlght current line number
-
-"colorscheme hybrid
-"colorscheme jellybeans

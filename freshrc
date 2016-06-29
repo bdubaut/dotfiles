@@ -10,8 +10,10 @@
 
 fresh freshshell/fresh bin/fresh --bin
 # Shell
-fresh 'shell/*'
-fresh 'shell/aliases/*'
+fresh-options --file=$HOME/.bashrc
+  fresh 'shell/*'
+   fresh 'shell/aliases/*'
+fresh-options
 
 # Vim
 fresh-options --file=$HOME/.vimrc
