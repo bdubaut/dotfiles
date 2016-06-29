@@ -36,6 +36,7 @@ Bundle 'plasticboy/vim-markdown'
 Bundle 'thoughtbot/vim-rspec.git'
 Bundle 'tpope/vim-rails'
 Bundle 'vim-ruby/vim-ruby'
+Bundle 'scrooloose/syntastic'
 
 let g:vim_markdown_initial_foldlevel=99
 

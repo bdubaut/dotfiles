@@ -41,3 +41,13 @@ set background=light
 " colorscheme Tomorrow-Night
 colorscheme solarized
 hi CursorLineNr ctermfg=7     " highlght current line number
+
+" Syntastic
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
