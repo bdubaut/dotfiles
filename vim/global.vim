@@ -57,3 +57,6 @@ let g:syntastic_mode_map = {
         \ "active_filetypes": ["ruby", "javascript", "typescript"],
         \ "passive_filetypes": [] }
 let g:loaded_syntastic_ruby_checkers = ['rubocop']
+
+" Typescript
+let g:typescript_compiler_options = '-sourcemap'
