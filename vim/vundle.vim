@@ -16,8 +16,9 @@ Bundle 'tpope/vim-surround'
 Bundle 'tpope/vim-unimpaired'
 
 " Colors
+Bundle 'jonathanfilip/vim-lucius'
 Bundle 'altercation/vim-colors-solarized'
-Bundle 'flazz/vim-colorschemes'
+" Bundle 'flazz/vim-colorschemes'
 
 " Visual
 let g:airline_powerline_fonts = 1
@@ -32,7 +33,7 @@ Bundle 'kchmck/vim-coffee-script'
 Bundle 'othree/html5.vim'
 Bundle 'ekalinin/Dockerfile.vim'
 Bundle 'pangloss/vim-javascript'
-Plugin 'leafgarland/typescript-vim'
+Bundle 'leafgarland/typescript-vim'
 Bundle 'plasticboy/vim-markdown'
 Bundle 'thoughtbot/vim-rspec.git'
 Bundle 'tpope/vim-rails'

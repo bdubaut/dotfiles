@@ -5,10 +5,10 @@ set showmatch                   " Highlight matching brackets on entry
 set laststatus=2                " Always show status line
 set autoread                    " Sensibly read changed files
 set showcmd                     " Display incomplete commands
-set cursorline                  " Where am I?
 set noswapfile                  " No swap files
 let &colorcolumn="80"         " Highlight column 80
 autocmd InsertEnter,InsertLeave * set cul! " Toggle cursorline in insert mode.
+set clipboard=unnamed
 
 " Indentation
 set tabstop=2
@@ -34,29 +34,34 @@ set relativenumber
 " Colors
 set t_Co=256                  " I use 16-color solarized, but...
 syntax enable
-set background=light
+set background=dark
 
 " let g:solarized_hitrail=1     " highlight trailing whitespace
 " call togglebg#map("<F5>")     " F5 toggles background dark/light
 " colorscheme Tomorrow-Night
-colorscheme solarized
-hi CursorLineNr ctermfg=7     " highlght current line number
+colorscheme Lucius
+LuciusDark
+" colorscheme heroku
+set cursorline                  " Where am I?
+hi CursorLine term=bold cterm=bold guibg=Grey40
+let g:airline_theme='base16_ashes'
+
+" Ruby
+let g:ruby_indent_access_modifier_style = 'outdent'
+let g:ruby_indent_block_style = 'do'
 
 " Syntastic
+let g:syntastic_mode_map = { "mode": "active",  "passive_filetypes": [] }
+let g:syntastic_quiet_messages = {'level': 'warnings'}
+let g:syntastic_ruby_checkers = ['rubocop']
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 1
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
 
-
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 0
-let g:syntastic_mode_map = {
-        \ "mode": "active",
-        \ "active_filetypes": ["ruby", "javascript", "typescript"],
-        \ "passive_filetypes": [] }
-let g:loaded_syntastic_ruby_checkers = ['rubocop']
 
 " Typescript
 let g:typescript_compiler_options = '-sourcemap'
