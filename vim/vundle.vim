@@ -18,6 +18,11 @@ Bundle 'tpope/vim-unimpaired'
 " Colors
 Bundle 'jonathanfilip/vim-lucius'
 Bundle 'altercation/vim-colors-solarized'
+Bundle 'vim-scripts/wombat256.vim'
+Bundle 'w0ng/vim-hybrid'
+Bundle 'morhetz/gruvbox'
+" Bundle 'croaky/vim-colors-github'
+Bundle 'acarapetis/vim-colors-github'
 " Bundle 'flazz/vim-colorschemes'
 
 " Visual

@@ -6,7 +6,7 @@ set laststatus=2                " Always show status line
 set autoread                    " Sensibly read changed files
 set showcmd                     " Display incomplete commands
 set noswapfile                  " No swap files
-let &colorcolumn="80"         " Highlight column 80
+" let &colorcolumn="80"         " Highlight column 80
 autocmd InsertEnter,InsertLeave * set cul! " Toggle cursorline in insert mode.
 set clipboard=unnamed
 
@@ -34,17 +34,18 @@ set relativenumber
 " Colors
 set t_Co=256                  " I use 16-color solarized, but...
 syntax enable
-set background=dark
+" set background=dark
 
 " let g:solarized_hitrail=1     " highlight trailing whitespace
 " call togglebg#map("<F5>")     " F5 toggles background dark/light
 " colorscheme Tomorrow-Night
-colorscheme Lucius
-LuciusDark
+" colorscheme Lucius
+colorscheme github
+" LuciusDark
 " colorscheme heroku
-set cursorline                  " Where am I?
-hi CursorLine term=bold cterm=bold guibg=Grey40
-let g:airline_theme='base16_ashes'
+" set cursorline                  " Where am I?
+" hi CursorLine term=bold cterm=bold guibg=Grey40
+let g:airline_theme='cool'
 
 " Ruby
 let g:ruby_indent_access_modifier_style = 'outdent'
