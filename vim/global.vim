@@ -34,18 +34,21 @@ set relativenumber
 " Colors
 set t_Co=256                  " I use 16-color solarized, but...
 syntax enable
-" set background=dark
-
+set background=light
+" let g:two_firewatch_italics=1
+" colo two-firewatch
+" let g:airline_theme='twofirewatch' " if you have Airline installed and want the associated theme
 " let g:solarized_hitrail=1     " highlight trailing whitespace
-" call togglebg#map("<F5>")     " F5 toggles background dark/light
+call togglebg#map("<F5>")     " F5 toggles background dark/light
 " colorscheme Tomorrow-Night
-" colorscheme Lucius
-colorscheme github
-" LuciusDark
+colorscheme Lucius
+" colorscheme github
+LuciusDarkHighContrast
 " colorscheme heroku
+" colorscheme firewatch
 " set cursorline                  " Where am I?
-" hi CursorLine term=bold cterm=bold guibg=Grey40
-let g:airline_theme='cool'
+hi CursorLine term=bold cterm=bold
+" let g:airline_theme='cool'
 
 " Ruby
 let g:ruby_indent_access_modifier_style = 'outdent'
