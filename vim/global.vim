@@ -41,9 +41,11 @@ set background=dark
 " let g:airline_theme='twofirewatch' " if you have Airline installed and want the associated theme
 " let g:solarized_hitrail=1     " highlight trailing whitespace
 call togglebg#map("<F5>")     " F5 toggles background dark/light
-colorscheme gruvbox
+" colorscheme gruvbox
 " colorscheme Lucius
+" colorscheme hemisu
 " colorscheme github
+colorscheme firewatch
 " LuciusDark
 " colorscheme heroku
 " colorscheme firewatch
