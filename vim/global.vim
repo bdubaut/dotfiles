@@ -45,7 +45,8 @@ call togglebg#map("<F5>")     " F5 toggles background dark/light
 " colorscheme Lucius
 " colorscheme hemisu
 " colorscheme github
-colorscheme firewatch
+" colorscheme firewatch
+colorscheme hybrid
 " LuciusDark
 " colorscheme heroku
 " colorscheme firewatch
