@@ -18,9 +18,7 @@ fresh-options
 # Vim
 fresh-options --file=$HOME/.vimrc
   fresh vim/leader.vim
-  fresh twe4ked/dotfiles vim/vundle_before.vim
   fresh vim/vundle.vim
-  fresh twe4ked/dotfiles vim/vundle_after.vim
   fresh vim/global.vim
   fresh 'vim/plugins/*.vim'
 fresh-options
@@ -37,4 +35,3 @@ if [ ! -e ~/.gitconfig.local ]; then
     git config -f ~/.gitconfig.local user.email $email
     echo "Configured git settings in ~/.gitconfig.local. Not stored in local .dotfiles repo."
 fi
-

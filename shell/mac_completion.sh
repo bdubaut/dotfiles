@@ -1,5 +1,4 @@
 for file in \
-  /usr/local/etc/bash_completion.d/git-completion.bash \
-  /usr/local/etc/bash_completion.d/git-prompt.sh; do
+  /usr/local/etc/bash_completion.d/git-completion.bash; do
   [ -f "$file" ] && source $file
 done

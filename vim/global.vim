@@ -36,7 +36,7 @@ set relativenumber
 set t_Co=256                  " I use 16-color solarized, but...
 syntax enable
 set background=dark
-" let g:two_firewatch_italics=1
+let g:two_firewatch_italics=1
 " colo two-firewatch
 " let g:airline_theme='twofirewatch' " if you have Airline installed and want the associated theme
 " let g:solarized_hitrail=1     " highlight trailing whitespace
@@ -49,7 +49,7 @@ colorscheme firewatch
 " LuciusDark
 " colorscheme heroku
 " colorscheme firewatch
-" set cursorline                  " Where am I?
+set cursorline                  " Where am I?
 hi CursorLine term=bold cterm=bold
 let g:airline_theme='lucius'
 
