@@ -60,6 +60,7 @@ Bundle 'thoughtbot/vim-rspec.git'
 Bundle 'tpope/vim-rails'
 Bundle 'vim-ruby/vim-ruby'
 Bundle 'scrooloose/syntastic'
+Bundle 'posva/vim-vue'
 
 let g:vim_markdown_initial_foldlevel=99
 

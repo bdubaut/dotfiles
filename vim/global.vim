@@ -48,11 +48,9 @@ call togglebg#map("<F5>")     " F5 toggles background dark/light
 " colorscheme firewatch
 colorscheme hybrid
 " LuciusDark
-" colorscheme heroku
-" colorscheme firewatch
 set cursorline                  " Where am I?
 hi CursorLine term=bold cterm=bold
-let g:airline_theme='lucius'
+let g:airline_theme='hybrid'
 
 " Ruby
 let g:ruby_indent_access_modifier_style = 'outdent'
