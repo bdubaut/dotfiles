@@ -29,7 +29,7 @@ Bundle 'tpope/vim-unimpaired'
 
 " Colors
 " Bundle 'croaky/vim-colors-github'
-" Bundle 'flazz/vim-colorschemes'
+Bundle 'flazz/vim-colorschemes'
 Bundle 'acarapetis/vim-colors-github'
 Bundle 'altercation/vim-colors-solarized'
 Bundle 'jonathanfilip/vim-lucius'
@@ -50,6 +50,7 @@ Bundle 'vim-airline/vim-airline-themes'
 " Language
 Bundle 'ekalinin/Dockerfile.vim'
 Bundle 'elixir-lang/vim-elixir'
+Bundle 'slashmili/alchemist.vim'
 Bundle 'elzr/vim-json'
 Bundle 'kchmck/vim-coffee-script'
 Bundle 'leafgarland/typescript-vim'
