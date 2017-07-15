@@ -56,8 +56,8 @@ syntax enable
 " let g:solarized_hitrail=1     " highlight trailing whitespace
 " set background=dark
 call togglebg#map("<F5>")     " F5 toggles background dark/light
-" colorscheme Tomorrow
-colorscheme 256-grayvim
+colorscheme Tomorrow
+" colorscheme 256-grayvim
 " colorscheme 1989
 " colorscheme tir_black
 set cursorline                  " Where am I?
