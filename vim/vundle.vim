@@ -40,6 +40,7 @@ Bundle 'rakr/vim-one'
 Bundle 'rakr/vim-two-firewatch'
 Bundle 'vim-scripts/wombat256.vim'
 Bundle 'w0ng/vim-hybrid'
+Bundle 'blerins/flattown'
 
 " Visual
 let g:airline_powerline_fonts = 1

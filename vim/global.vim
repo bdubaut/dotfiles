@@ -34,7 +34,10 @@ autocmd BufWritePre * StripWhitespace
 let g:airline_powerline_fonts=0
 let g:airline_right_sep=''
 let g:airline_left_sep=''
+let g:airline#extensions#branch#format = 1
 let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#syntastic#enabled = 1
+let g:airline#extensions#hunks#enabled = 1
 
 " Searching
 set incsearch
@@ -54,19 +57,27 @@ syntax enable
 " colo two-firewatch
 " let g:airline_theme='gruvbox' " if you have Airline installed and want the associated theme
 " let g:solarized_hitrail=1     " highlight trailing whitespace
-" set background=dark
+set background=dark
 call togglebg#map("<F5>")     " F5 toggles background dark/light
-colorscheme Tomorrow
+" colorscheme Tomorrow
 " colorscheme 256-grayvim
 " colorscheme 1989
 " colorscheme tir_black
+colorscheme jellybeans
 set cursorline                  " Where am I?
 hi CursorLine term=bold cterm=bold
-let g:airline_theme='tomorrow'
+let g:airline_theme='jellybeans'
 
 " Ruby
+map <Leader>t :call RunCurrentSpecFile()<CR>
+map <Leader>s :call RunNearestSpec()<CR>
+map <Leader>l :call RunLastSpec()<CR>
+map <Leader>a :call RunAllSpecs()<CR>
 let g:ruby_indent_access_modifier_style = 'outdent'
 let g:ruby_indent_block_style = 'do'
+
+" vim-rspec
+let g:rspec_command = "bundle exec rspec --tty --format=doc {spec}"
 
 " Syntastic
 let g:syntastic_mode_map = { "mode": "active",  "passive_filetypes": [] }
