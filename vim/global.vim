@@ -6,19 +6,25 @@ set laststatus=2                " Always show status line
 set autoread                    " Sensibly read changed files
 set showcmd                     " Display incomplete commands
 set noswapfile                  " No swap files
+set rtp+=/usr/local/opt/fzf     " FZF config
 " let &colorcolumn="80"         " Highlight column 80
 autocmd InsertEnter,InsertLeave * set cul! " Toggle cursorline in insert mode.
 set clipboard=unnamed
 
-" CtrlP
-let g:ctrlp_max_depth = 80
-let g:ctrlp_show_hidden = 1
-let g:ctrlp_max_files = 0
-let g:ctrlp_use_caching = 1
-let g:ctrlp_clear_cache_on_exit = 0
-let g:ctrlp_show_hidden = 0
-let g:ctrlp_lazy_update = 1
-set wildignore+=*/.git/*,*/.hg/*,*/.svn/*        " Linux/MacOSX
+" " CtrlP
+" let g:ctrlp_max_depth = 80
+" let g:ctrlp_show_hidden = 1
+" let g:ctrlp_max_files = 0
+" let g:ctrlp_use_caching = 1
+" let g:ctrlp_clear_cache_on_exit = 0
+" let g:ctrlp_show_hidden = 0
+" let g:ctrlp_lazy_update = 1
+" set wildignore+=*/.git/*,*/.hg/*,*/.svn/*        " Linux/MacOSX
+"
+" FZF
+nmap ; :Buffers<CR>
+nmap <Leader>p :Files<CR>
+nmap <Leader>r :Tags<CR>
 
 " Indentation
 set tabstop=2
@@ -30,14 +36,6 @@ filetype indent on
 set foldmethod=indent                      " Fold based on source indentation
 set foldlevelstart=99                      " Expand all folds by default
 autocmd BufWritePre * StripWhitespace
-
-let g:airline_powerline_fonts=0
-let g:airline_right_sep=''
-let g:airline_left_sep=''
-let g:airline#extensions#branch#format = 1
-let g:airline#extensions#tabline#enabled = 1
-let g:airline#extensions#syntastic#enabled = 1
-let g:airline#extensions#hunks#enabled = 1
 
 " Searching
 set incsearch
@@ -60,10 +58,10 @@ syntax enable
 set background=dark
 call togglebg#map("<F5>")     " F5 toggles background dark/light
 " colorscheme Tomorrow
+colorscheme hybrid
 " colorscheme 256-grayvim
 " colorscheme 1989
 " colorscheme tir_black
-colorscheme jellybeans
 set cursorline                  " Where am I?
 hi CursorLine term=bold cterm=bold
 let g:airline_theme='jellybeans'
@@ -79,17 +77,60 @@ let g:ruby_indent_block_style = 'do'
 " vim-rspec
 let g:rspec_command = "bundle exec rspec --tty --format=doc {spec}"
 
-" Syntastic
-let g:syntastic_mode_map = { "mode": "active",  "passive_filetypes": [] }
-let g:syntastic_quiet_messages = {'level': 'warnings'}
-let g:syntastic_ruby_checkers = ['rubocop']
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 1
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
+" Ale linters
+let g:ale_sign_warning = '▲'
+let g:ale_sign_error = '✗'
+highlight link ALEWarningSign String
+highlight link ALEErrorSign Title
+let g:alse_completion_enabled = 1
+
+" LightLine
+let g:lightline = {
+\ 'active': {
+\   'left': [['mode', 'paste'], ['filename', 'modified']],
+\   'right': [['lineinfo'], ['percent'], ['readonly', 'linter_warnings', 'linter_errors', 'linter_ok']]
+\ },
+\ 'component_expand': {
+\   'linter_warnings': 'LightlineLinterWarnings',
+\   'linter_errors': 'LightlineLinterErrors',
+\   'linter_ok': 'LightlineLinterOK'
+\ },
+\ 'component_type': {
+\   'readonly': 'error',
+\   'linter_warnings': 'warning',
+\   'linter_errors': 'error'
+\ },
+\ }
+
+function! LightlineLinterWarnings() abort
+  let l:counts = ale#statusline#Count(bufnr(''))
+  let l:all_errors = l:counts.error + l:counts.style_error
+  let l:all_non_errors = l:counts.total - l:all_errors
+  return l:counts.total == 0 ? '' : printf('%d ◆', all_non_errors)
+endfunction
+
+function! LightlineLinterErrors() abort
+  let l:counts = ale#statusline#Count(bufnr(''))
+  let l:all_errors = l:counts.error + l:counts.style_error
+  let l:all_non_errors = l:counts.total - l:all_errors
+  return l:counts.total == 0 ? '' : printf('%d ✗', all_errors)
+endfunction
+
+function! LightlineLinterOK() abort
+  let l:counts = ale#statusline#Count(bufnr(''))
+  let l:all_errors = l:counts.error + l:counts.style_error
+  let l:all_non_errors = l:counts.total - l:all_errors
+  return l:counts.total == 0 ? '✓ ' : ''
+endfunction
+
+autocmd User ALELint call s:MaybeUpdateLightline()
+
+" Update and show lightline but only if it's visible (e.g., not in Goyo)
+function! s:MaybeUpdateLightline()
+  if exists('#lightline')
+    call lightline#update()
+  end
+endfunction
 
 " Typescript
 let g:typescript_compiler_options = '-sourcemap'
