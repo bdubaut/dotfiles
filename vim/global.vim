@@ -23,7 +23,7 @@ set clipboard=unnamed
 "
 " FZF
 nmap ; :Buffers<CR>
-nmap <Leader>p :Files<CR>
+nmap <C-p> :Files<CR>
 nmap <Leader>r :Tags<CR>
 
 " Indentation
