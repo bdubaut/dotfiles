@@ -3,3 +3,4 @@ for file in \
   [ -f "$file" ] && source $file
 done
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
+source ~/.fresh/build/shell.sh
