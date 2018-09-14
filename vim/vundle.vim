@@ -46,22 +46,29 @@ Bundle 'junegunn/limelight.vim'
 Bundle 'junegunn/goyo.vim'
 
 " Language
+Bundle 'toml-lang/toml'
+Bundle 'cespare/vim-toml'
+Bundle 'dm1try/ilexir'
 Bundle 'ekalinin/Dockerfile.vim'
 Bundle 'elixir-lang/vim-elixir'
-Bundle 'slashmili/alchemist.vim'
 Bundle 'elzr/vim-json'
 Bundle 'kchmck/vim-coffee-script'
 Bundle 'leafgarland/typescript-vim'
+Bundle 'mhinz/vim-mix-format'
 Bundle 'mxw/vim-jsx'
 Bundle 'othree/html5.vim'
 Bundle 'pangloss/vim-javascript'
 Bundle 'plasticboy/vim-markdown'
 Bundle 'posva/vim-vue'
-Bundle 'w0rp/ale'
+Bundle 'rust-lang/rust.vim'
+Bundle 'slashmili/alchemist.vim'
 Bundle 'tpope/vim-rails'
 Bundle 'vim-ruby/vim-ruby'
+Bundle 'w0rp/ale'
 
 let g:vim_markdown_initial_foldlevel=99
+let g:mix_format_on_save = 1
+let g:mix_format_options = '--check-equivalent'
 
 " Comments
 Bundle 'tomtom/tcomment_vim'

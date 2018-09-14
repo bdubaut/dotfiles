@@ -55,16 +55,18 @@ syntax enable
 " colo two-firewatch
 " let g:airline_theme='gruvbox' " if you have Airline installed and want the associated theme
 " let g:solarized_hitrail=1     " highlight trailing whitespace
-set background=dark
+set background=light
 call togglebg#map("<F5>")     " F5 toggles background dark/light
-colorscheme Tomorrow-Night
+" colorscheme Tomorrow-Night
 " colorscheme hybrid
 " colorscheme 256-grayvim
 " colorscheme 1989
 " colorscheme tir_black
+colorscheme solarized
+
 set cursorline                  " Where am I?
 hi CursorLine term=bold cterm=bold
-let g:airline_theme='jellybeans'
+" let g:airline_theme='jellybeans'
 
 " Ruby
 map <Leader>t :call RunCurrentSpecFile()<CR>
@@ -87,7 +89,7 @@ let g:alse_completion_enabled = 1
 " LightLine
 let g:lightline = {
 \ 'active': {
-\   'left': [['mode', 'paste'], ['filename', 'modified']],
+\   'left': [['mode', 'paste'], ['gitbranch', 'readonly', 'filename', 'modified']],
 \   'right': [['lineinfo'], ['percent'], ['readonly', 'linter_warnings', 'linter_errors', 'linter_ok']]
 \ },
 \ 'component_expand': {
@@ -95,12 +97,16 @@ let g:lightline = {
 \   'linter_errors': 'LightlineLinterErrors',
 \   'linter_ok': 'LightlineLinterOK'
 \ },
+\ 'component_function': {
+\   'gitbranch': 'fugitive#head'
+\ },
 \ 'component_type': {
 \   'readonly': 'error',
 \   'linter_warnings': 'warning',
 \   'linter_errors': 'error'
-\ },
 \ }
+\ }
+let g:lightline.colorscheme = 'solarized'
 
 function! LightlineLinterWarnings() abort
   let l:counts = ale#statusline#Count(bufnr(''))
@@ -124,6 +130,11 @@ function! LightlineLinterOK() abort
 endfunction
 
 autocmd User ALELint call s:MaybeUpdateLightline()
+
+" Elixir
+let g:alchemist#elixit_erlang_src="/Users/bdubaut/.asdf/shims"
+let g:ConqueTerm_CloseOnEnd=1
+let g:alchemist_iex_term_size = 15
 
 " Update and show lightline but only if it's visible (e.g., not in Goyo)
 function! s:MaybeUpdateLightline()
