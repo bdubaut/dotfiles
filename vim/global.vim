@@ -55,14 +55,14 @@ syntax enable
 " colo two-firewatch
 " let g:airline_theme='gruvbox' " if you have Airline installed and want the associated theme
 " let g:solarized_hitrail=1     " highlight trailing whitespace
-set background=light
+set background=dark
 call togglebg#map("<F5>")     " F5 toggles background dark/light
 " colorscheme Tomorrow-Night
 " colorscheme hybrid
-" colorscheme 256-grayvim
+colorscheme cobalt2
 " colorscheme 1989
 " colorscheme tir_black
-colorscheme solarized
+" colorscheme solarized
 
 set cursorline                  " Where am I?
 hi CursorLine term=bold cterm=bold
@@ -106,7 +106,7 @@ let g:lightline = {
 \   'linter_errors': 'error'
 \ }
 \ }
-let g:lightline.colorscheme = 'solarized'
+let g:lightline.colorscheme = 'PaperColor'
 
 function! LightlineLinterWarnings() abort
   let l:counts = ale#statusline#Count(bufnr(''))

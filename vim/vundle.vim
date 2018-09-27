@@ -38,6 +38,7 @@ Bundle 'vim-scripts/wombat256.vim'
 Bundle 'w0ng/vim-hybrid'
 Bundle 'archseer/colibri.vim'
 Bundle 'dracula/vim'
+Bundle 'sonph/onehalf', {'rtp': 'vim/'}
 
 " Visual
 Bundle 'airblade/vim-gitgutter.git'
