@@ -11,15 +11,7 @@ set rtp+=/usr/local/opt/fzf     " FZF config
 autocmd InsertEnter,InsertLeave * set cul! " Toggle cursorline in insert mode.
 set clipboard=unnamed
 
-" " CtrlP
-" let g:ctrlp_max_depth = 80
-" let g:ctrlp_show_hidden = 1
-" let g:ctrlp_max_files = 0
-" let g:ctrlp_use_caching = 1
-" let g:ctrlp_clear_cache_on_exit = 0
-" let g:ctrlp_show_hidden = 0
-" let g:ctrlp_lazy_update = 1
-" set wildignore+=*/.git/*,*/.hg/*,*/.svn/*        " Linux/MacOSX
+set wildignore+=*/.git/*,*/.hg/*,*/.svn/*        " Linux/MacOSX
 "
 " FZF
 nmap ; :Buffers<CR>
@@ -48,25 +40,23 @@ set number
 set relativenumber
 
 " Colors
-set t_Co=256                  " I use 16-color solarized, but...
+set t_Co=256
 syntax enable
 
-" let g:two_firewatch_italics=1
-" colo two-firewatch
 " let g:airline_theme='gruvbox' " if you have Airline installed and want the associated theme
 " let g:solarized_hitrail=1     " highlight trailing whitespace
 set background=dark
 call togglebg#map("<F5>")     " F5 toggles background dark/light
 " colorscheme Tomorrow-Night
 " colorscheme hybrid
-colorscheme cobalt2
+" colorscheme cobalt2
+colorscheme dracula
 " colorscheme 1989
 " colorscheme tir_black
 " colorscheme solarized
 
 set cursorline                  " Where am I?
 hi CursorLine term=bold cterm=bold
-" let g:airline_theme='jellybeans'
 
 " Ruby
 map <Leader>t :call RunCurrentSpecFile()<CR>
@@ -106,7 +96,7 @@ let g:lightline = {
 \   'linter_errors': 'error'
 \ }
 \ }
-let g:lightline.colorscheme = 'PaperColor'
+let g:lightline.colorscheme = 'default'
 
 function! LightlineLinterWarnings() abort
   let l:counts = ale#statusline#Count(bufnr(''))
