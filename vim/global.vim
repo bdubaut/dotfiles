@@ -96,7 +96,7 @@ let g:lightline = {
 \   'linter_errors': 'error'
 \ }
 \ }
-let g:lightline.colorscheme = 'default'
+let g:lightline.colorscheme = 'nord'
 
 function! LightlineLinterWarnings() abort
   let l:counts = ale#statusline#Count(bufnr(''))
