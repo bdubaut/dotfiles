@@ -51,6 +51,7 @@ call togglebg#map("<F5>")     " F5 toggles background dark/light
 " colorscheme hybrid
 " colorscheme cobalt2
 colorscheme dracula
+" colorscheme Tomorrow
 " colorscheme 1989
 " colorscheme tir_black
 " colorscheme solarized
