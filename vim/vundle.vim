@@ -40,6 +40,7 @@ Bundle 'archseer/colibri.vim'
 Bundle 'dracula/vim'
 Bundle 'sonph/onehalf', {'rtp': 'vim/'}
 Bundle 'arcticicestudio/nord-vim'
+Bundle 'ayu-theme/ayu-vim'
 
 " Visual
 Bundle 'airblade/vim-gitgutter.git'

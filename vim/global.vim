@@ -10,6 +10,7 @@ set rtp+=/usr/local/opt/fzf     " FZF config
 " let &colorcolumn="80"         " Highlight column 80
 autocmd InsertEnter,InsertLeave * set cul! " Toggle cursorline in insert mode.
 set clipboard=unnamed
+set termguicolors
 
 set wildignore+=*/.git/*,*/.hg/*,*/.svn/*        " Linux/MacOSX
 "
@@ -51,7 +52,9 @@ call togglebg#map("<F5>")     " F5 toggles background dark/light
 " colorscheme hybrid
 " colorscheme cobalt2
 " colorscheme dracula
-colorscheme Tomorrow-Night-Bright
+" colorscheme Tomorrow-Night-Bright
+let ayucolor="mirage"
+colorscheme ayu
 " colorscheme Tomorrow
 " colorscheme 1989
 " colorscheme tir_black
@@ -77,6 +80,7 @@ let g:ale_sign_error = '✗'
 highlight link ALEWarningSign String
 highlight link ALEErrorSign Title
 let g:alse_completion_enabled = 1
+let g:ale_elixir_elixir_ls_release = '/Users/bdubaut/Workspace/OpenSource/elixir-ls/rel'
 
 " LightLine
 let g:lightline = {
@@ -98,7 +102,12 @@ let g:lightline = {
 \   'linter_errors': 'error'
 \ }
 \ }
-let g:lightline.colorscheme = 'nord'
+" wombat, solarized, powerline, jellybeans, Tomorrow,
+" Tomorrow_Night, Tomorrow_Night_Blue, Tomorrow_Night_Eighties,
+" PaperColor, seoul256, landscape, one, darcula, molokai, materia,
+" material, OldHope, nord, 16color and deus are available.
+"
+let g:lightline.colorscheme = 'deus'
 
 function! LightlineLinterWarnings() abort
   let l:counts = ale#statusline#Count(bufnr(''))
