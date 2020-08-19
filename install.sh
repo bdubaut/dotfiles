@@ -1,0 +1,28 @@
+#!/bin/bash
+
+# install Fresh shell
+bash <(curl -sL https://get.freshshell.com)
+echo "source ~/.fresh/build/shell.sh" >> ~/.bashrc
+source ~/.bashrc
+
+# Generate dotfiles
+~/.fresh/build/bin/fresh
+
+# if on MacOS
+
+# Install homebrew
+# install tree
+# install openssl
+# install ruby-build
+# Install asdf
+# install docker
+# install kubernetes & helm
+# install terraform
+# install git-lfs
+# install yamllint
+# install yarn
+# install pgcli
+# install bat
+# install the_silver_searcher
+# install gh
+# install neovim
