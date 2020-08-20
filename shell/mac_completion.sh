@@ -4,5 +4,12 @@ for file in \
 done
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 
+if [ -f ~/.bash_aliases ]; then
+. ~/.bash_aliases
+fi
+
 source ~/.fresh/build/shell.sh
-source /usr/local/opt/asdf/asdf.sh
+
+if [ -f /usr/local/opt/asdf/asdf.sh ]; then
+  source /usr/local/opt/asdf/asdf.sh
+fi

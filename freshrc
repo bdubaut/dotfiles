@@ -3,16 +3,17 @@ fresh freshshell/fresh bin/fresh --bin
 # Shell
 fresh shell/bash_profile --file=$HOME/.bash_profile
 
+fresh-options --file=$HOME/.bash_aliases
+  fresh shell/aliases/aliases.sh
+  fresh shell/aliases/git.sh
+fresh-options
+
 fresh-options --file=$HOME/.bashrc
   fresh shell/mac_completion.sh
   fresh shell/prompt.sh
   fresh shell/path.sh
 fresh-options
 
-fresh-options --file=$HOME/.bash_aliases
-  fresh shell/aliases/aliases.sh
-  fresh shell/aliases/git.sh
-fresh-options
 
 # Git config
 fresh git/gitconfig --file=$HOME/.gitconfig
