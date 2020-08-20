@@ -6,7 +6,7 @@ echo "source ~/.fresh/build/shell.sh" >> ~/.bashrc
 source ~/.bashrc
 
 # Generate dotfiles
-~/.fresh/build/bin/fresh
+fresh
 
 # if on MacOS
 
