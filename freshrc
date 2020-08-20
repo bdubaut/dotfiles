@@ -1,11 +1,14 @@
 fresh freshshell/fresh bin/fresh --bin
 
 # Shell
-fresh-options --file=$HOME/.bashrc
+fresh bash_profile --file
+
+fresh-options --file=~/.bashrc
   fresh 'shell/*'
   fresh 'shell/aliases/*'
 fresh-options
 
-# Neovim config
-
 # Git config
+fresh gitconfig --file
+
+# Neovim config
