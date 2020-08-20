@@ -1,3 +1,19 @@
+# set a fancy prompt (non-color, unless we know we "want" color)
+case "$TERM" in
+    xterm-color|*-256color) color_prompt=yes;;
+esac
+
+if [ -x /usr/bin/dircolors ]; then
+    test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
+    alias ls='ls --color=auto'
+    #alias dir='dir --color=auto'
+    #alias vdir='vdir --color=auto'
+
+    #alias grep='grep --color=auto'
+    #alias fgrep='fgrep --color=auto'
+    #alias egrep='egrep --color=auto'
+fi
+
 # get current branch in git repo
 function parse_git_branch() {
 	BRANCH=`git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/\1/'`
@@ -45,6 +61,6 @@ function parse_git_dirty {
 	fi
 }
 
-# export PS1="\[\e[32m\]\W\[\e[m\]\[\e[33m\]\`parse_git_branch\`\[\e[m\]> "
-export PS1='\[\]\[\]\u\[\]:\[\]\w\[\]$ '
+# export PS1='\[\]\[\]\u\[\]:\[\]\w\[\]$ '
+PS1='\[]0;\u: \w\]\[[01;32m\]\u\[[00m\]:\[[01;34m\]\w\[[00m\]$ '
 
