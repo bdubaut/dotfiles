@@ -1,5 +1,8 @@
 fresh freshshell/fresh bin/fresh --bin
 
+# Git config
+fresh git/gitconfig --file=$HOME/.gitconfig
+
 # Shell
 fresh shell/bash_profile --file=$HOME/.bash_profile
 
@@ -15,7 +18,5 @@ fresh-options --file=$HOME/.bashrc
 fresh-options
 
 
-# Git config
-fresh git/gitconfig --file=$HOME/.gitconfig
 
 # Neovim config

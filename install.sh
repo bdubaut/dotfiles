@@ -1,14 +1,9 @@
 #!/bin/bash
 
 # install Fresh shell
-bash <(curl -sL https://get.freshshell.com)
-echo "source ~/.fresh/build/shell.sh" >> ~/.bashrc
-source ~/.bashrc
+FRESH_LOCAL="$HOME/dotfiles" bash <(curl -sL https://get.freshshell.com)
 
-# Generate dotfiles
-fresh
-
-# if on MacOS
+FRESH_LOCAL="$HOME/dotfiles" fresh
 
 # Install homebrew
 # install tree
