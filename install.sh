@@ -1,11 +1,12 @@
 #!/bin/bash
 
-if [ -f $HOME/.gitconfig ] then
-    rm $HOME/.gitconfig
+# Remove pre-existing files if they exist
+if [ -f ~/.gitconfig ]; then
+    rm ~/.gitconfig
 fi
 
-if [ -f $HOME/.bashrc ] then
-    rm $HOME/.bashrc
+if [ -f ~/.bashrc ]; then
+    rm ~/.bashrc
 fi
 
 
