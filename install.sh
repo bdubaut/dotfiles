@@ -1,9 +1,16 @@
 #!/bin/bash
 
+if [ -f $HOME/.gitconfig ] then
+    rm $HOME/.gitconfig
+fi
+
+if [ -f $HOME/.bashrc ] then
+    rm $HOME/.bashrc
+fi
+
+
 # install Fresh shell
 FRESH_LOCAL="$HOME/dotfiles" bash <(curl -sL https://get.freshshell.com)
-
-FRESH_LOCAL="$HOME/dotfiles" fresh
 
 # Install homebrew
 # install tree
