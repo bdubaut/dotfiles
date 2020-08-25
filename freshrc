@@ -18,6 +18,7 @@ fresh-options --file=$HOME/.vimrc
   fresh vim/plugins.vim
 fresh-options
 
+fresh vim/init.vim --file=$HOME/.config/nvim/init.vim
 
 
 # Neovim config
