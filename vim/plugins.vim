@@ -9,6 +9,8 @@ endif
 
 call plug#begin('~/.vim/plugged')
 # put your plugin declarations here
+Plug 'scrooloose/nerdtree'
+
 
 call plug#end()
 filetype plugin indent on
