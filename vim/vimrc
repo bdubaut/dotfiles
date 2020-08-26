@@ -55,7 +55,8 @@ set t_Co=256
 syntax enable
 
 set background=dark
-call togglebg#map("<F5>")     " F5 toggles background dark/light
+" F5 toggles background dark/light
+" call togglebg#map("<F5>")
 
 set cursorline                  " Where am I?
 set noshowmode " lightline shows the status not vim
