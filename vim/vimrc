@@ -3,7 +3,7 @@ let mapleader=","
 
 " Misc. config
 set nocompatible
-set encoding=utf-8
+set encoding=UTF-8
 set backspace=indent,eol,start  " Why would I ever want backspace to not work?
 set scrolloff=3                 " Start scrolling 3 lines before edge
 set showmatch                   " Highlight matching brackets on entry
@@ -102,7 +102,15 @@ else
 "   let &t_te = &t_te . "\033]1\007\033]1\007"
 endif
 
-" Mappings
+" plugin config 
+
+" DevIcons
+let g:WebDevIconsUnicodeDecorateFolderNodes = 1 
+let g:DevIconsEnableFoldersOpenClose = 1
+let g:DevIconsEnableFolderExtensionPatternMatching = 1
+let g:webdevicons_conceal_nerdtree_brackets = 1
+
+
 
 " vim-test
 nmap <silent> t<C-n> :TestNearest<CR>
