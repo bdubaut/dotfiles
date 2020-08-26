@@ -101,3 +101,15 @@ else
 "   let &t_ti = &t_ti . "\033]10;#586e75\007\033]11;#fdf6e3\007"
 "   let &t_te = &t_te . "\033]1\007\033]1\007"
 endif
+
+" Mappings
+
+" vim-test
+nmap <silent> t<C-n> :TestNearest<CR>
+nmap <silent> t<C-f> :TestFile<CR>
+nmap <silent> t<C-s> :TestSuite<CR>
+nmap <silent> t<C-l> :TestLast<CR>
+nmap <silent> t<C-g> :TestVisit<CR>
+
+
+

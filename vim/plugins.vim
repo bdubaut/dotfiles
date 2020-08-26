@@ -21,6 +21,11 @@ Plug 'tpope/vim-sensible'
 
 Plug 'Yggdroot/indentLine'
 
+" Languages
+
+" Testing
+Plug 'vim-test/vim-test'
+
 " Git
 Plug 'tpope/vim-fugitive'
 Plug 'jreybert/vimagit'
