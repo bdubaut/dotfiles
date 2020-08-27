@@ -13,6 +13,7 @@ Plug 'scrooloose/nerdtree'
 Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 Plug 'morhetz/gruvbox'
+Plug 'altercation/vim-colors-solarized'
 
 " Completions
 Plug 'tpope/vim-surround'

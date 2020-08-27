@@ -53,10 +53,10 @@ set showmatch
 " Colors
 set t_Co=256
 syntax enable
+colorscheme 'gruvbox'
 
-set background=dark
 " F5 toggles background dark/light
-" call togglebg#map("<F5>")
+call togglebg#map("<F5>")
 
 set cursorline                  " Where am I?
 set noshowmode " lightline shows the status not vim
