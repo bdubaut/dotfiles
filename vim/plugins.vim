@@ -45,6 +45,9 @@ Plug 'rust-lang/rust.vim'
 Plug 'toml-lang/toml'
 Plug 'cespare/vim-toml'
 
+" GraphQL
+Plug 'jparise/vim-graphql'
+
 " Testing
 Plug 'vim-test/vim-test'
 
@@ -66,10 +69,3 @@ Plug 'plasticboy/vim-markdown'
 Plug 'ryanoasis/vim-devicons'
 call plug#end()
 
-autocmd vimenter * colorscheme gruvbox
-
-" F5 toggles background dark/light
-call togglebg#map("<F5>")
-
-
-filetype plugin indent on
