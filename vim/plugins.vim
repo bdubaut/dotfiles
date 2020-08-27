@@ -14,6 +14,8 @@ Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 Plug 'morhetz/gruvbox'
 Plug 'altercation/vim-colors-solarized'
+Plug 'itchyny/lightline.vim'
+
 
 " Completions
 Plug 'tpope/vim-surround'

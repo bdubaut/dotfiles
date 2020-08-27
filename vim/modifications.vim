@@ -10,6 +10,71 @@ call togglebg#map("<F5>")
 
 filetype plugin indent on
 
+
+
+
+" ================================================
+" LIGTHLINE MODIFICATIONS 
+" ================================================
+
+let g:lightline = {
+  'colorscheme': 'gruvbox',
+  'separator': { 'left': "\u2b80", 'right': "\u2b82" },
+  'subseparator': { 'left': "\u2b81", 'right': "\u2b83" },
+  'active': {
+    'left': [
+      [ 'mode', 'paste' ],
+      [ 'fugitive', 'filename' ]
+    ]
+  },
+  'component_function': {
+    'fugitive': 'LightlineFugitive',
+    'readonly': 'LightlineReadonly',
+    'modified': 'LightlineModified',
+    'filename': 'LightlineFilename'
+    }
+  }
+
+function! LightlineModified()
+  if &filetype == "help"
+    return ""
+  elseif &modified
+    return "+"
+  elseif &modifiable
+    return ""
+  else
+    return ""
+  endif
+endfunction
+
+function! LightlineReadonly()
+  if &filetype == "help"
+    return ""
+  elseif &readonly
+    return ""
+  else
+    return ""
+  endif
+endfunction
+
+function! LightlineFugitive()
+  if exists("*fugitive#head")
+    let branch = fugitive#head()
+    return branch !=# ''  ? "\u2b60 " . branch : ''
+  endif
+  return ''
+endfunction
+
+function! LightlineFilename()
+  return ('' != LightlineReadonly() ? LightlineReadonly() . ' ' : '') .
+  ('' != expand('%:t') ? WebDevIconsGetFileTypeSymbol() . ' ' . expand('%:t') : '[No Name]') .
+  ('' != LightlineModified() ? ' ' . LightlineModified() : '')
+endfunction
+
+
+
+
+
 " ================================================
 " NERDTREE MODIFICATIONS 
 " ================================================
