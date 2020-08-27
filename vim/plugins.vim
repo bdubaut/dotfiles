@@ -25,6 +25,7 @@ Plug 'tpope/vim-sensible'
 Plug 'Yggdroot/indentLine'
 
 " Languages
+Plug 'w0rp/ale'
 
 " Ruby
 Plug 'vim-ruby/vim-ruby'
@@ -32,6 +33,8 @@ Plug 'tpope/vim-rails'
 
 " Elixir
 Plug 'elixir-lang/vim-elixir'
+Plug 'mhinz/vim-mix-format'
+Plug 'GrzegorzKozub/vim-elixirls', { 'do': ':ElixirLsCompileSync' }
 
 " Javascript
 Plug 'mxw/vim-jsx'
@@ -55,7 +58,6 @@ Plug 'vim-test/vim-test'
 
 " Git
 Plug 'tpope/vim-fugitive'
-Plug 'jreybert/vimagit'
 Plug 'airblade/vim-gitgutter'
 
 " Fuzzy finder
