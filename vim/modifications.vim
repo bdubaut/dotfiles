@@ -16,9 +16,8 @@ filetype plugin indent on
 " ================================================
 " LIGTHLINE MODIFICATIONS 
 " ================================================
-let g:lightline={
-      \ 'colorscheme': 'gruvbox'
-    }
+let g:lightline={}
+let g:lightline.colorscheme='gruvbox'
 
 
 
