@@ -18,22 +18,22 @@ filetype plugin indent on
 " ================================================
 
 let g:lightline = {
-  'colorscheme': 'gruvbox',
-  'separator': { 'left': "\u2b80", 'right': "\u2b82" },
-  'subseparator': { 'left': "\u2b81", 'right': "\u2b83" },
-  'active': {
-    'left': [
-      [ 'mode', 'paste' ],
-      [ 'fugitive', 'filename' ]
-    ]
-  },
-  'component_function': {
-    'fugitive': 'LightlineFugitive',
-    'readonly': 'LightlineReadonly',
-    'modified': 'LightlineModified',
-    'filename': 'LightlineFilename'
-    }
-  }
+      \      'colorscheme': 'solarized',
+      \ 'separator': { 'left': "\u2b80", 'right': "\u2b82" },
+      \ 'subseparator': { 'left': "\u2b81", 'right': "\u2b83" },
+      \      'active': {
+      \        'left': [
+      \          [ 'mode', 'paste' ],
+      \          [ 'fugitive', 'filename' ]
+      \        ]
+      \      },
+      \      'component_function': {
+      \        'fugitive': 'LightlineFugitive',
+      \        'readonly': 'LightlineReadonly',
+      \        'modified': 'LightlineModified',
+      \        'filename': 'LightlineFilename'
+      \      }
+      \  }
 
 function! LightlineModified()
   if &filetype == "help"
