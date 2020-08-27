@@ -65,4 +65,11 @@ Plug 'plasticboy/vim-markdown'
 
 Plug 'ryanoasis/vim-devicons'
 call plug#end()
+
+autocmd vimenter * colorscheme gruvbox
+
+" F5 toggles background dark/light
+call togglebg#map("<F5>")
+
+
 filetype plugin indent on
