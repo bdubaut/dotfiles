@@ -48,8 +48,6 @@ set wildmenu
 set lazyredraw
 set showmatch
 
-
-
 " Colors
 set t_Co=256
 syntax enable
@@ -63,13 +61,12 @@ set noshowmode " lightline shows the status not vim
 set undolevels=5000
 set scrolloff=999
 set laststatus=2
-" hi CursorLine term=bold cterm=bold
+hi CursorLine term=bold cterm=bold
 
-" Folding {{{
+" Folding
 set foldenable
 set foldlevelstart=10
 set foldnestmax=10
-" }}}
 
 set nobackup
 set nowritebackup
