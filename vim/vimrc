@@ -53,7 +53,7 @@ set showmatch
 " Colors
 set t_Co=256
 syntax enable
-colorscheme 'gruvbox'
+colorscheme gruvbox
 
 " F5 toggles background dark/light
 call togglebg#map("<F5>")
