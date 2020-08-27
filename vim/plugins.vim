@@ -12,7 +12,7 @@ call plug#begin('~/.vim/plugged')
 Plug 'scrooloose/nerdtree'
 Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
-
+Plug 'morhetz/gruvbox'
 
 " Completions
 Plug 'tpope/vim-surround'
@@ -22,6 +22,27 @@ Plug 'tpope/vim-sensible'
 Plug 'Yggdroot/indentLine'
 
 " Languages
+
+" Ruby
+Plug 'vim-ruby/vim-ruby'
+Plug 'tpope/vim-rails'
+
+" Elixir
+Plug 'elixir-lang/vim-elixir'
+
+" Javascript
+Plug 'mxw/vim-jsx'
+Plug 'othree/html5.vim'
+Plug 'pangloss/vim-javascript'
+
+" Elm
+
+" Rust
+Plug 'rust-lang/rust.vim'
+
+" TOML
+Plug 'toml-lang/toml'
+Plug 'cespare/vim-toml'
 
 " Testing
 Plug 'vim-test/vim-test'
@@ -37,6 +58,9 @@ Plug 'junegunn/fzf.vim'
 Plug 'jonhoo/proximity-sort'
 Plug 'terryma/vim-multiple-cursors'
 
+Plug 'ekalinin/Dockerfile.vim'
+Plug 'elzr/vim-json'
+Plug 'plasticboy/vim-markdown'
 
 Plug 'ryanoasis/vim-devicons'
 call plug#end()
