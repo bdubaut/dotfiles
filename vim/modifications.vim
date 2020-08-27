@@ -56,8 +56,7 @@ autocmd BufEnter * if bufname('%') !~# 'NERD_tree_' | nnoremap <silent> <Esc><Es
 " Automatically close vim if only NERDTree left
 autocmd BufEnter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
   
-" Focus on opened view after starting (instead of NERDTree)
-au VimEnter * :wincmd w
+au VimEnter *  NERDTree
 
 nnoremap <silent> <C-\> :call ToggleNerdTree()<CR>
 " Prevent this command activation in NERDTree
