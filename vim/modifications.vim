@@ -90,3 +90,4 @@ let g:ale_fixers.elixir = [ 'mix_format' ]
 autocmd FileType elixir,eelixir nnoremap <C-]> :ALEGoToDefinition<CR>
 autocmd FileType elixir,eelixir nnoremap <C-\> :ALEFindReferences<CR>
 autocmd FileType elixir,eelixir nnoremap <Leader>f :ALEFix<CR>
+
