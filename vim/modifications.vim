@@ -81,7 +81,7 @@ endif
 let g:ale_elixir_elixir_ls_release = s:user_dir . '/plugins/vim-elixirls/elixir-ls/release'
 
 " https://github.com/JakeBecker/elixir-ls/issues/54
-let g:ale_elixir_elixir_ls_config = { 'elixirLS': { 'dialyzerEnabled': v:false } }
+" let g:ale_elixir_elixir_ls_config = { 'elixirLS': { 'dialyzerEnabled': v:false } }
 let g:ale_linters = {}
 let g:ale_linters.elixir = [ 'credo', 'elixir-ls' ]
 let g:ale_fixers = {}
