@@ -91,3 +91,6 @@ autocmd FileType elixir,eelixir nnoremap <C-]> :ALEGoToDefinition<CR>
 autocmd FileType elixir,eelixir nnoremap <C-\> :ALEFindReferences<CR>
 autocmd FileType elixir,eelixir nnoremap <Leader>f :ALEFix<CR>
 
+" Distraction free writing
+autocmd! User GoyoEnter Limelight
+autocmd! User GoyoLeave Limelight!
