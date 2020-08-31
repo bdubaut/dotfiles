@@ -71,7 +71,7 @@ Plug 'elzr/vim-json'
 Plug 'plasticboy/vim-markdown'
 
 Plug 'ryanoasis/vim-devicons'
-Plugin 'junegunn/goyo.vim'
-Plugin 'junegunn/limelight.vim'
+Plug 'junegunn/goyo.vim'
+Plug 'junegunn/limelight.vim'
 call plug#end()
 
