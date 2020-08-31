@@ -78,6 +78,7 @@ else
   let s:user_dir = has('win32') ? expand('~/vimfiles') : expand('~/.vim')
 endif
 
+let g:ale_completion_enabled = 1
 let g:ale_elixir_elixir_ls_release = s:user_dir . '/plugins/vim-elixirls/elixir-ls/release'
 
 " https://github.com/JakeBecker/elixir-ls/issues/54
